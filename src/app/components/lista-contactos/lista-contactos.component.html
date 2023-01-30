@@ -1,0 +1,52 @@
+<div class="flex justify-around">
+  <div
+    class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
+  >
+    <div class="flex items-center justify-between mb-4">
+      <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">
+        Contactos
+      </h5>
+    </div>
+    <div class="flow-root">
+      <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+        <li *ngFor="let lista of listaContactos" class="py-3 sm:py-4">
+          <div class="flex items-center space-x-4">
+            <div class="flex-shrink-0"></div>
+            <div class="flex-1 min-w-0">
+              <p
+                class="text-sm font-medium text-gray-900 truncate dark:text-white"
+              >
+                {{ lista.nombre }} {{ lista.apellidos }}
+              </p>
+            </div>
+            <div
+              class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+            >
+              {{ lista.email }}
+            </div>
+            <button
+              class="bg-red-600 px-2 py-1 rounded text-white hover:bg-red-400"
+              (click)="obtenerContacto(lista.id)"
+            >
+              Ver detalles
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <ng-container *ngIf="contactoSeleccionado; else noContactoSeleccionado">
+      <h3>Datos del Contacto: {{ contactoSeleccionado.id }}</h3>
+      <p>
+        {{ contactoSeleccionado.nombre }} {{ contactoSeleccionado.apellidos }}
+      </p>
+      <p>{{ contactoSeleccionado.edad }} años</p>
+    </ng-container>
+  </div>
+
+  <ng-template #noContactoSeleccionado>
+    <h3>Ningún contacto seleccionado</h3>
+  </ng-template>
+</div>

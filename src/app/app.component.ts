@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tour-heroes';
+  nombre = 'Anónimo';
+
+  recibirMensaje(event:string){
+alert(event);
+  }
 }

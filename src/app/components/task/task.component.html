@@ -1,0 +1,15 @@
+<!-- TODO: Reformular con directivas estructurales y estilos condicionales -->
+
+<div class="max-w-sm rounded overflow-hidden shadow-lg">
+    <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">{{ task?.title }}</div>
+        <p class="text-gray-700 text-base">{{ task?.description }}</p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{
+            task?.completed ? "Completada" : "Por completar" }}</span>
+        <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
+            <button class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" (click)="deleteTask()">Borrar tarea</button>
+        </span>
+    </div>
+</div>
