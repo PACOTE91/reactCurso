@@ -4,8 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InputComponent } from './input/input.component';
-import { TaskListComponent } from './components/task-list/task-list.component';
-import { TaskFormComponent } from './components/task-form/task-form.component';
 import { TaskComponent } from './components/task/task.component';
 import { RegisterFormComponent } from './components/auth/register-form/register-form.component';
 import { LoginFormComponent } from './components/auth/login-form/login-form.component';
@@ -17,9 +15,13 @@ import { NotFoundPageComponent } from './components/pages/not-found-page/not-fou
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListsModule } from './modules/lists/lists.module';
 import { ContactoService } from './services/contacto.service';
-import { ListaContactosComponent } from './components/pages/lista-contactos/lista-contactos.component';
+// import { ListaContactosComponent } from './components/pages/lista-contactos/lista-contactos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactsPageComponent } from './components/pages/contacts-page/contacts-page.component';
+import { TaskListComponent } from './components/task-list/task-list.component';
+import { TaskFormComponent } from './components/task-form/task-form.component';
+import { getLocaleFirstDayOfWeek } from '@angular/common';
+import { ListaContactosComponent } from './components/lista-contactos/lista-contactos.component';
 
 @NgModule({
   declarations: [
