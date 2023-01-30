@@ -12,7 +12,8 @@ export class LoginFormComponent {
   ngOnInit(): void {
     this.authService.login('eve.holt@reqres.in', 'cityslicka').subscribe(
       (response) => {
-        console.log('Enviado, ok ' + response);
+        console.log(response);
+        sessionStorage.setItem('token', response.token);
       },
       (error) => console.log('Ha habido algun error ' + error)
     );
