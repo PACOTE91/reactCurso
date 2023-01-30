@@ -17,8 +17,9 @@ import { NotFoundPageComponent } from './components/pages/not-found-page/not-fou
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListsModule } from './modules/lists/lists.module';
 import { ContactoService } from './services/contacto.service';
-import { ListaContactosComponent } from './components/lista-contactos/lista-contactos.component';
+import { ListaContactosComponent } from './components/pages/lista-contactos/lista-contactos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactsPageComponent } from './components/pages/contacts-page/contacts-page.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginPageComponent,
     RegisterPageComponent,
     NotFoundPageComponent,
-    ListaContactosComponent
+    ListaContactosComponent,
+    ContactsPageComponent
   ],
   imports: [
     BrowserModule,
